@@ -34,11 +34,11 @@
 }
 
 .choices:focus{
-  text-decoration: underline;
+  color: red;
 }
 
 .spots{
-  border: solid 1px;
+  border: solid 2px;
   height: 65vh;
   overflow: scroll;
   padding-left: 1rem;
@@ -54,6 +54,7 @@
 
 .spotlist{
   display: none;
+  margin-top: -1.3rem;
 }
 
 .spotsitems{
@@ -62,10 +63,64 @@
 }
 
 .spotsitems:hover{
- text-decoration: underline;
+ color: red;
+}
+
+.spotinfo {
+margin-top: 2.1rem;
+}
+
+.line{
+border: solid 1px;
+margin-top: -1rem;
+margin-bottom: -1rem;
+}
+
+.popup{
+  background-color: white;
+  width:30%;
+  height: 60vh;
+  bottom: 8.4rem;
+  left: 67.5%;
+  position: absolute;
+  display: none;
+  border: solid black 2px;
+}
+
+.imgs{
+  width: 86%;
+  margin-top: 3rem;
+  margin-left: 7%;
+  justify-content: center;
+}
+
+.info{
+  font-family:'Monospace 821';
+  font-size: 1.3rem;
+  margin-left: 2.5rem;
+  margin-right: 2.3rem;
 }
 
 
+
+
+@media screen and (max-width: 1791px) {
+  .popup{
+    bottom: 6.1rem;
+}
+.imgs{
+margin-top: 2rem;
+width: 83%;
+margin-left: 2.8rem;
+}
+.info{
+  font-family:'Monospace 821';
+  font-size: 1.2rem;
+  margin-left: 2.8rem;
+  margin-right: 2rem;
+}
+
+}
 
 @media screen and (max-width: 1360px) {
   .choices{
@@ -93,6 +148,22 @@
   .spotsitems{
     font-size: 1.95rem;
   }
+  .popup{
+    bottom: 12.8rem;
+    height: 56vh;
+    left: 67%;
+  }
+  .info{
+    font-size: 1.2rem;
+    margin-left: 2.2rem;
+    margin-right: 2rem;
+  }
+
+  .imgs{
+    margin-left: 2.2rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+  }
 
 }
 
@@ -111,12 +182,30 @@
   }
 
   .spotlist{
-    margin-top: 2rem;
+    margin-top: 2.7rem;
   }
 
   .spotsitems{
     font-size: 1.64rem;
   }
+
+  .popup{
+    height: 50vh;
+    left:62.3% ;
+    width: 34%;
+    bottom: 19.8rem;
+  }
+
+  .info{
+    font-size: 1rem;
+    margin-left: 1.7rem;
+  }
+
+  .imgs{
+    margin-left: 1.7rem;
+    margin-top: 2.1rem;
+  }
+
 
 }
 
@@ -144,7 +233,18 @@
   }
 
   .spotlist{
-    margin-top: 2rem;
+    margin-top: 2.7rem;
+  }
+
+  .popup{
+    height: 49vh;
+    left: 55%;
+    width: 40%;
+    bottom: 21.9rem;
+  }
+
+  .imgs{
+    margin-top: 1.6rem;
   }
 
 }
@@ -162,12 +262,36 @@
     margin-bottom: 1.3rem;
   }
   
-
   .spotlist{
     margin-top: -.5rem;
   }
 
+  .popup{
+   bottom: 19.2rem;
+   height: 49vh;
+   left: 44%;
+   width: 50%;
+  }
+
 }
+
+@media screen and (max-width: 502px) {
+.popup{
+  height:46vh ;
+  bottom:21.5rem ;
+}
+
+.imgs{
+margin-left: 1.3rem;
+margin-top: 1.6rem;
+}
+
+.info{
+margin-left:1.3rem;
+}
+}
+
+
 
 @media screen and (max-width: 376px) {
 
@@ -198,6 +322,13 @@
 
   .spotsitems{
     font-size: 1.3rem;
+  }
+
+  .popup{
+    height: 54vh;
+    top: 7.65rem;
+    width: 70%;
+    left: 24.6%;
   }
 
 }
