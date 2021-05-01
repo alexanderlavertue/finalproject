@@ -77,6 +77,8 @@ function closepopup (){
 var checkbox1 = document.getElementById("jscheck1").addEventListener("click", ledgefilter);
 var checkbox2 = document.getElementById("jscheck2").addEventListener("click", railfilter);
 var checkbox3 = document.getElementById("jscheck3").addEventListener("click", bankfilter);
+var checkbox4 = document.getElementById("jscheck4").addEventListener("click", stairfilter);
+var checkbox5 = document.getElementById("jscheck5").addEventListener("click", showall);
 var ledges = document.querySelector(".ledges");
 var rails = document.querySelector(".rail");
 var banks = document.querySelector(".bank");
@@ -86,7 +88,6 @@ function ledgefilter (){
     rails.style.display = "none";
     banks.style.display = "none";
     stairs.style.display = "none";
-    
 }
 
 
