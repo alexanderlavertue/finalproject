@@ -157,6 +157,8 @@ height: 1.1rem;
   display: flex;
   flex-direction: row;
   align-items: baseline;
+  flex-wrap: wrap;
+  margin-left: -.5rem;
 }
 
 @media screen and (max-width: 1791px) {
@@ -234,6 +236,9 @@ margin-left: 2.8rem;
     margin-left: .7rem;
   }
 
+  .footer{
+    margin-top: -.1rem;
+  }
 }
 
 @media screen and (max-width: 940px) {
@@ -278,6 +283,7 @@ margin-left: 2.8rem;
   #exit{
     margin-left: .4rem;
   }
+
 
 
 }
@@ -411,6 +417,15 @@ margin-left:1.3rem;
   
   .imgs{
     margin-top: -.65rem;
+  }
+
+  .spotfilter{
+    font-size: .9rem;
+  }
+
+  .boxandname{
+    margin-top: -1rem;
+    margin-bottom: .3rem;
   }
 }
 
