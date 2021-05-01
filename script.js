@@ -4,6 +4,33 @@ var midtownbutton = document.getElementById('midtownbutton').addEventListener("c
 var midtown = document.getElementById('jsmidtown');
 var uptownbutton = document.getElementById('uptownbutton').addEventListener("click", showuptownspots);
 var uptown = document.getElementById('jsuptown');
+var skatedata = [{obs:"Four stair double set", gro:"Low - Med", hyd:"Dunkin donuts on Walker st", ped:" Med- High", img:"chinatowndouble.png"}, 
+                 {obs:"ledges", gro:"High", hyd:"Burger king on worth st", ped:"low", img:"worthplaza.png"},
+                 {obs:"Huge bank to drop", gro:"High", hyd:"Starbucks on worth st", ped:"High", img:"courthouse.png"},
+                 {obs:"Ledges and stair sets", gro:"Very high", hyd:"Ganesvort on liberty st", ped:"Very high", img:"freedomtower.png"},
+                 {obs:"Ledges going over stairs", gro:"Med", hyd:"Dueane reade on water st", ped:"Low - Med", img:"pyrimad ledges.png"},
+                 {obs:"C shaped ledges", gro:"Med", hyd:"Gregorys coffee on Front st", ped:"Low", img:"cledge.png"},
+                 {obs:"Hubba going over stairs", gro:"Med", hyd:"Starbucks on worth st", ped:"Med", img:"Screen Shot 2021-04-29 at 7.44.52 PM.png"},
+                 {obs:" Ledges and stair sets ", gro:"High", hyd:"Starbucks on cedar st", ped:"Med-High", img:"zuccoti.png"},
+                 //midtown
+                 {obs:"Ledges", gro:"Very high", hyd:"Lunas coffee shop on 29th st ", ped:"Med-Low", img:"bigscreen.png"},
+                 {obs:"One ledge, Kinda sketchy.", gro:"High", hyd:"Mcdonalods on 42nd st. ", ped:"Very High", img:"bryant.png"},
+                 {obs:"Ledges", gro:"Med", hyd:"Starbucks on broadway", ped:"Very High", img:"timesquare.png"},
+                 {obs:"Benches", gro:"Med", hyd:"Nothing close bring water", ped:"Med", img:"painewebber.png"},
+                 {obs:"Small ledges and three stairs", gro:"High", hyd:"Starbucks on e 50th st ", ped:"Med-High", img:"seaport.png"},
+                 {obs:"Ledge", gro:"Med", hyd:"Chick Fil A on lexington ", ped:"Med", img:"ibm.png"},
+                 {obs:"Handrail", gro:"High", hyd:"Chick Fil A on lexington ", ped:"Med-Low", img:"suraezrail.png"},
+                 {obs:"Curbs and ledges", gro:"High", hyd:"A lot of food carts around", ped:"Med-High", img:"columbuscircle.png"},
+                 //uptown
+                 {obs:"Ledges", gro:"Low-Med", hyd:"Dunkin donuts on 110th st ", ped:"Med", img:"lenox ledges.png"},
+                 {obs:"Ledges over bank", gro:"Low-Med", hyd:"Sweet green on broadway ", ped:"Med-High", img:"columbia.png"},
+                 {obs:"Small rails", gro:"Med", hyd:"Subway on madison ave", ped:"Med", img:"marcusgravey.png"},
+                 {obs:"3 drop down ledges ", gro:"Low-Med", hyd:"Max cafe on amsterdam ave", ped:"Med-High", img:"seminary.png"},
+                 {obs:"Two ten stairs and a ledge to bank", gro:"high", hyd:"Nothings close bring water", ped:"Low-Med", img:"grantstomb.png"},
+                 {obs:"Banks", gro:"Med", hyd:"Dunkin donuts on MLK blvd", ped:"High", img:"125thst .png"},
+                 {obs:"Three block and ledges", gro:"Low-Med", hyd:"Mcdonolads on lenox ave ", ped:"Low", img:"greenthree.png"},
+                 {obs:"Banks", gro:"Med", hyd:"f=Food carts sometimes", ped:"Med-Low", img:"river.png"},
+                ]
 
 function showlesspots (){
     les.style.display = "block";
@@ -24,117 +51,41 @@ function showuptownspots (){
     midtown.style.display = "none";
 }
 
-var spot1 = document.getElementById('spot1').addEventListener("click", showspot1)
-var spot1pop = document.getElementById('spot1pop')
+var spotitem = document.querySelectorAll(".spotsitems").forEach((item,i)=>{
+    item.addEventListener ("click", showspots);
+})
 
-function showspot1 (){
-    spot1pop.style.display = "block";
-    spot2pop.style.display = "none";
-    spot3pop.style.display = "none";
-    spot4pop.style.display = "none";
-    spot5pop.style.display = "none";
-    spot6pop.style.display = "none";
-    spot7pop.style.display = "none";
-    spot8pop.style.display = "none";
+var popup = document.querySelector("#popup");
+
+function showspots(){
+   popup.style.display = "block";
+   let clickedon = event.currentTarget
+   let num = clickedon.dataset.spot;
+   document.querySelector(".imgs").src = skatedata[num].img;
+   document.querySelector(".obs").innerText = skatedata[num].obs;
+   document.querySelector(".gro").innerText = skatedata[num].gro;
+   document.querySelector(".hyd").innerText = skatedata[num].hyd;
+   document.querySelector(".ped").innerText = skatedata[num].ped;
 }
 
-var spot2 = document.getElementById('spot2').addEventListener("click", showspot2)
-var spot2pop = document.getElementById('spot2pop')
+var exit = document.getElementById("exit").addEventListener("click", closepopup);
 
-function showspot2 (){
-    spot2pop.style.display = "block";
-    spot1pop.style.display = "none";
-    spot3pop.style.display = "none";
-    spot4pop.style.display = "none";
-    spot5pop.style.display = "none";
-    spot6pop.style.display = "none";
-    spot7pop.style.display = "none";
-    spot8pop.style.display = "none";
+function closepopup (){
+    popup.style.display = "none";
+    }
+
+var checkbox1 = document.getElementById("jscheck1").addEventListener("click", ledgefilter);
+var checkbox2 = document.getElementById("jscheck2").addEventListener("click", railfilter);
+var checkbox3 = document.getElementById("jscheck3").addEventListener("click", bankfilter);
+var ledges = document.querySelectorAll(".ledges");
+var rails = document.querySelectorAll(".rail");
+var banks = document.querySelectorAll(".bank");
+var stairs = document.querySelectorAll(".stairs");
+
+function ledgefilter (){
+    rails.forEach((item,i)=>{
+        item.style.display = "none"
+    }
 }
 
-var spot3 = document.getElementById('spot3').addEventListener("click", showspot3)
-var spot3pop = document.getElementById('spot3pop')
 
-function showspot3 (){
-    spot3pop.style.display = "block";
-    spot1pop.style.display = "none";
-    spot2pop.style.display = "none";
-    spot4pop.style.display = "none";
-    spot5pop.style.display = "none";
-    spot6pop.style.display = "none";
-    spot7pop.style.display = "none";
-    spot8pop.style.display = "none";
-}
-
-var spot4 = document.getElementById('spot4').addEventListener("click", showspot4)
-var spot4pop = document.getElementById('spot4pop')
-
-function showspot4 (){
-    spot4pop.style.display = "block";
-    spot1pop.style.display = "none";
-    spot2pop.style.display = "none";
-    spot3pop.style.display = "none";
-    spot5pop.style.display = "none";
-    spot6pop.style.display = "none";
-    spot7pop.style.display = "none";
-    spot8pop.style.display = "none";
-}
-
-var spot5 = document.getElementById('spot5').addEventListener("click", showspot5)
-var spot5pop = document.getElementById('spot5pop')
-
-function showspot5 (){
-    spot5pop.style.display = "block";
-    spot1pop.style.display = "none";
-    spot2pop.style.display = "none";
-    spot3pop.style.display = "none";
-    spot4pop.style.display = "none";
-    spot6pop.style.display = "none";
-    spot7pop.style.display = "none";
-    spot8pop.style.display = "none";
-}
-
-var spot6 = document.getElementById('spot6').addEventListener("click", showspot6)
-var spot6pop = document.getElementById('spot6pop')
-
-function showspot6 (){
-    spot6pop.style.display = "block";
-    spot1pop.style.display = "none";
-    spot2pop.style.display = "none";
-    spot3pop.style.display = "none";
-    spot4pop.style.display = "none";
-    spot5pop.style.display = "none";
-    spot7pop.style.display = "none";
-    spot8pop.style.display = "none";
-}
-
-var spot7 = document.getElementById('spot7').addEventListener("click", showspot7)
-var spot7pop = document.getElementById('spot7pop')
-
-function showspot7 (){
-    spot7pop.style.display = "block";
-    spot1pop.style.display = "none";
-    spot2pop.style.display = "none";
-    spot3pop.style.display = "none";
-    spot4pop.style.display = "none";
-    spot5pop.style.display = "none";
-    spot6pop.style.display = "none";
-    spot8pop.style.display = "none";
-}
-
-var spot8 = document.getElementById('spot8').addEventListener("click", showspot8)
-var spot8pop = document.getElementById('spot8pop')
-
-function showspot8 (){
-    spot8pop.style.display = "block";
-    spot1pop.style.display = "none";
-    spot2pop.style.display = "none";
-    spot3pop.style.display = "none";
-    spot4pop.style.display = "none";
-    spot5pop.style.display = "none";
-    spot6pop.style.display = "none";
-    spot7pop.style.display = "none";
-}
-//function remove (){
-    //spot1pop.style.display = "none"; 
-//}

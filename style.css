@@ -19,6 +19,7 @@
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
+   align-items: baseline;
  }
 
  .choicestitle{
@@ -31,6 +32,7 @@
   border: none;
   font-family:'Monospace 821';
   font-size: 2.6rem;
+  cursor: pointer;
 }
 
 .choices:focus{
@@ -49,7 +51,7 @@
   font-family:'Monospace 821';
   font-size: 2rem;
   text-align: center;
-  margin-top: 2.4rem;
+  margin-top:-.6rem;
 }
 
 .spotlist{
@@ -60,6 +62,7 @@
 .spotsitems{
   font-family:'Monospace 821';
   font-size: 2.3rem;
+  cursor: pointer;
 }
 
 .spotsitems:hover{
@@ -89,7 +92,7 @@ margin-bottom: -1rem;
 
 .imgs{
   width: 86%;
-  margin-top: 3rem;
+  margin-top: -.3rem;
   margin-left: 7%;
   justify-content: center;
 }
@@ -101,15 +104,67 @@ margin-bottom: -1rem;
   margin-right: 2.3rem;
 }
 
+.info::before{
+  content: var(--field);
+}
 
+.obs{
+  --field:"Obstacles-";
+}
 
+.gro{
+  --field:"Ground Quality-";
+}
+
+.hyd{
+  --field:"Hydration-";
+}
+
+.ped{
+  --field:"Pedestrian Level-";
+}
+
+#exit{
+  font-family:'Monospace 821';
+  font-size: 1.5rem;
+  margin-bottom: none;
+  margin-left: .7rem;
+  margin-top: .2rem;
+  cursor: pointer;
+}
+
+.check{
+  -webkit-appearance: none;
+  border: solid 1px;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-left: .5rem;
+}
+
+.check:checked::after{
+content: '\2613';
+margin-left: .17rem;
+width: 1.1rem;
+height: 1.1rem;
+}
+
+.spotfilter{
+  font-family:'Monospace 821';
+  margin-left: .5rem;
+}
+
+.boxandname{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
 
 @media screen and (max-width: 1791px) {
   .popup{
     bottom: 6.1rem;
 }
 .imgs{
-margin-top: 2rem;
+margin-top: -1rem;
 width: 83%;
 margin-left: 2.8rem;
 }
@@ -118,6 +173,14 @@ margin-left: 2.8rem;
   font-size: 1.2rem;
   margin-left: 2.8rem;
   margin-right: 2rem;
+}
+
+#exit{
+  margin-left: .9rem;
+}
+
+.footer{
+  margin-top: -1.5rem;
 }
 
 }
@@ -135,6 +198,7 @@ margin-left: 2.8rem;
 
   .footer{
     font-size: 1.5rem;
+    margin-top: -.7rem;
   }
 
   .spots{
@@ -162,7 +226,12 @@ margin-left: 2.8rem;
   .imgs{
     margin-left: 2.2rem;
     margin-right: 2rem;
-    margin-top: 2rem;
+    margin-top: -1rem;
+  }
+
+  #exit{
+    font-size: 1.2rem;
+    margin-left: .7rem;
   }
 
 }
@@ -203,7 +272,11 @@ margin-left: 2.8rem;
 
   .imgs{
     margin-left: 1.7rem;
-    margin-top: 2.1rem;
+    margin-top: -.5rem;
+  }
+   
+  #exit{
+    margin-left: .4rem;
   }
 
 
@@ -225,7 +298,7 @@ margin-left: 2.8rem;
   }
   .spots{
     height: 78vh;
-    margin-bottom: 2.3rem;
+    margin-bottom: 0rem;
   }
 
   .locations{
@@ -244,7 +317,7 @@ margin-left: 2.8rem;
   }
 
   .imgs{
-    margin-top: 1.6rem;
+    margin-top: -.3rem;
   }
 
 }
@@ -283,7 +356,7 @@ margin-left: 2.8rem;
 
 .imgs{
 margin-left: 1.3rem;
-margin-top: 1.6rem;
+margin-top: -.9rem;
 }
 
 .info{
@@ -331,5 +404,13 @@ margin-left:1.3rem;
     left: 24.6%;
   }
 
+  #exit{
+    font-size: 1rem;
+    margin-left: .3rem;
+  }
+  
+  .imgs{
+    margin-top: -.65rem;
+  }
 }
 
