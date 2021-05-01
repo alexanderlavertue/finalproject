@@ -74,20 +74,17 @@ function closepopup (){
     popup.style.display = "none";
     }
 
-var checkbox1 = document.getElementById("jscheck1").addEventListener("click", ledgefilter);
-var checkbox2 = document.getElementById("jscheck2").addEventListener("click", railfilter);
-var checkbox3 = document.getElementById("jscheck3").addEventListener("click", bankfilter);
-var checkbox4 = document.getElementById("jscheck4").addEventListener("click", stairfilter);
-var checkbox5 = document.getElementById("jscheck5").addEventListener("click", showall);
-var ledges = document.querySelector(".ledges");
-var rails = document.querySelector(".rail");
-var banks = document.querySelector(".bank");
-var stairs = document.querySelector(".stairs");
 
-function ledgefilter (){
-    rails.style.display = "none";
-    banks.style.display = "none";
-    stairs.style.display = "none";
-}
+
+document.querySelector('.boxandname').addEventListener('change', () => {
+    document.querySelectorAll('.spotsitems').forEach((el) => el.style.display = 'none');
+    Array.from(document.querySelectorAll('.check:checked'))
+      .map((el) => el.value)
+      .forEach((value) => {
+        document.querySelectorAll(`.spotsitems.${value}`).forEach((el) => el.style.display = '');
+      });
+  });
+
+
 
 
