@@ -77,15 +77,16 @@ function closepopup (){
 var checkbox1 = document.getElementById("jscheck1").addEventListener("click", ledgefilter);
 var checkbox2 = document.getElementById("jscheck2").addEventListener("click", railfilter);
 var checkbox3 = document.getElementById("jscheck3").addEventListener("click", bankfilter);
-var ledges = document.querySelectorAll(".ledges");
-var rails = document.querySelectorAll(".rail");
-var banks = document.querySelectorAll(".bank");
-var stairs = document.querySelectorAll(".stairs");
+var ledges = document.querySelector(".ledges");
+var rails = document.querySelector(".rail");
+var banks = document.querySelector(".bank");
+var stairs = document.querySelector(".stairs");
 
 function ledgefilter (){
-    rails.forEach((item,i)=>{
-        item.style.display = "none"
-    }
+    rails.style.display = "none";
+    banks.style.display = "none";
+    stairs.style.display = "none";
+    
 }
 
 
