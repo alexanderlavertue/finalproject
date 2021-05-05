@@ -142,7 +142,7 @@ var skatedata = [{
     {
         obs: "3 drop down ledges ",
         gro: "Low-Med",
-        hyd: "Max cafe on Amsterdam ave",
+        hyd: "Max cafe on Amsterdam Ave",
         ped: "Med-High",
         img: "seminary.png"
     },
@@ -163,7 +163,7 @@ var skatedata = [{
     {
         obs: "Three block and ledges",
         gro: "Low-Med",
-        hyd: "Mcdonolads on Lenox ave ",
+        hyd: "Mcdonolads on Lenox Ave ",
         ped: "Low",
         img: "greenthree.png"
     },
