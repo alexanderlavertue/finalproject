@@ -5,7 +5,7 @@ var midtown = document.getElementById('jsmidtown');
 var uptownbutton = document.getElementById('uptownbutton').addEventListener("click", showuptownspots);
 var uptown = document.getElementById('jsuptown');
 var skatedata = [{obs:"Four stair double set", gro:"Low - Med", hyd:"Dunkin donuts on Walker st", ped:" Med- High", img:"chinatowndouble.png"}, 
-                 {obs:"ledges", gro:"High", hyd:"Burger king on worth st", ped:"low", img:"worthplaza.png"},
+                 {obs:"Banks", gro:"Med", hyd:"Starbucks on pearl st ", ped:"Low-Med", img:"Screen Shot 2021-05-02 at 12.41.57 PM.png"},
                  {obs:"Huge bank to drop", gro:"High", hyd:"Starbucks on worth st", ped:"High", img:"courthouse.png"},
                  {obs:"Ledges and stair sets", gro:"Very high", hyd:"Ganesvort on liberty st", ped:"Very high", img:"freedomtower.png"},
                  {obs:"Ledges going over stairs", gro:"Med", hyd:"Dueane reade on water st", ped:"Low - Med", img:"pyrimad ledges.png"},
@@ -14,12 +14,12 @@ var skatedata = [{obs:"Four stair double set", gro:"Low - Med", hyd:"Dunkin donu
                  {obs:" Ledges and stair sets ", gro:"High", hyd:"Starbucks on cedar st", ped:"Med-High", img:"zuccoti.png"},
                  //midtown
                  {obs:"Ledges", gro:"Very high", hyd:"Lunas coffee shop on 29th st ", ped:"Med-Low", img:"bigscreen.png"},
-                 {obs:"One ledge, Kinda sketchy.", gro:"High", hyd:"Mcdonalods on 42nd st. ", ped:"Very High", img:"bryant.png"},
+                 {obs:"Banks and one high rail.", gro:"Med", hyd:"99 cent pizza on 46th st ", ped:"Med", img:"forbidden banks.png"},
                  {obs:"Ledges", gro:"Med", hyd:"Starbucks on broadway", ped:"Very High", img:"timesquare.png"},
                  {obs:"Benches", gro:"Med", hyd:"Nothing close bring water", ped:"Med", img:"painewebber.png"},
                  {obs:"Small ledges and three stairs", gro:"High", hyd:"Starbucks on e 50th st ", ped:"Med-High", img:"seaport.png"},
                  {obs:"Ledge", gro:"Med", hyd:"Chick Fil A on lexington ", ped:"Med", img:"ibm.png"},
-                 {obs:"Handrail", gro:"High", hyd:"Chick Fil A on lexington ", ped:"Med-Low", img:"suraezrail.png"},
+                 {obs:"Nine stair", gro:"Med", hyd:"Pret a manger on 3rd ave", ped:"Low", img:"9stait.png"},
                  {obs:"Curbs and ledges", gro:"High", hyd:"A lot of food carts around", ped:"Med-High", img:"columbuscircle.png"},
                  //uptown
                  {obs:"Ledges", gro:"Low-Med", hyd:"Dunkin donuts on 110th st ", ped:"Med", img:"lenox ledges.png"},
