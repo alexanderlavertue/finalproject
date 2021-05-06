@@ -8,7 +8,7 @@ var skatedata = [{
         obs: "Four stair double set",
         gro: "Low-Med",
         hyd: "Dunkin donuts on Walker St",
-        ped: "Med-High",
+        ped: "Med",
         img: "chinatowndouble.png"
     },
     {
